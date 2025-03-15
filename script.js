@@ -65,7 +65,7 @@ function checkout() {
     pesanWA += `\nMetode Pembayaran: ${metodePembayaran}`;
     pesanWA += `\n\nTolong proses ya! 🙏`;
 
-    let nomorWA = "081289181330";
+    let nomorWA = "+6281289181330";
     let linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`;
 
     window.location.href = linkWA;
