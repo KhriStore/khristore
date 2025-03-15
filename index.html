@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khristore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>- Khristore -</h1>
+    </header>
+
+    <div class="container">
+        <div class="produk">
+            <img src="mlbb.png" alt="Starlight Member MLBB">
+            <h2>Starlight Member MLBB</h2>
+            <p>Harga: <b>Rp 32.000</b></p>
+            <button onclick="tambahKeKeranjang('Starlight Member MLBB', 32000)">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="produk">
+            <img src="starrail.png" alt="Express Supply Pass HSR">
+            <h2>Express Supply Pass HSR</h2>
+            <p>Harga: <b>Rp 57.000</b></p>
+            <button onclick="tambahKeKeranjang('Express Supply Pass HSR', 57000)">Tambah ke Keranjang</button>
+        </div>
+    </div>
+
+    <div class="keranjang">
+        <h2>🛒 Keranjang Belanja</h2>
+        <ul id="daftar-keranjang"></ul>
+        <p><b>Total Harga: Rp <span id="total-harga">0</span></b></p>
+    
+        <h3>Metode Pembayaran</h3>
+        <div class="metode-pembayaran">
+            <label class="pilihan" onclick="pilihPembayaran('QRIS')">
+                <input type="radio" name="pembayaran" value="QRIS">
+                <span>🔳 QRIS</span>
+            </label>
+            <label class="pilihan" onclick="pilihPembayaran('E-Wallet')">
+                <input type="radio" name="pembayaran" value="E-Wallet">
+                <span>📲 E-Wallet</span>
+            </label>
+            <label class="pilihan" onclick="pilihPembayaran('Transfer Bank')">
+                <input type="radio" name="pembayaran" value="Transfer Bank">
+                <span>🏦 Transfer Bank</span>
+            </label>
+        </div>
+    
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

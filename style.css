@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Animasi saat halaman dimuat */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Animasi Fade-in untuk produk */
+.produk {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.5s forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.produk img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Hover efek untuk tombol */
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+.keranjang {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Animasi shake untuk keranjang saat item ditambahkan */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.hapus-item {
+    background: #ff4444;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s;
+}
+
+.hapus-item:hover {
+    background: #cc0000;
+}
+
+.metode-pembayaran {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pilihan {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.pilihan:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.pilihan input {
+    display: none;
+}
+
+/* Animasi untuk pilihan aktif */
+.pilihan.active {
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+}
